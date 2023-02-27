@@ -8,3 +8,8 @@ Ping all hosts
 ```
 ansible  all -m ping
 ```
+
+List hosts
+```
+ansible all  --list-hosts
+```
