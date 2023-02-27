@@ -23,3 +23,8 @@ Install packages remotely:
 ```
 ansible all -m apt -a name=vim-nox --become --ask-become-pass
 ```
+
+Install playbooks:
+```
+ansible-playbook --ask-become-pass install_apache.yml
+```
