@@ -11,3 +11,14 @@
       state: latest
     when: ansible_distribution == "Ubuntu"
 
+
+  - name: copy file to server
+    tags: ubuntu,mariadb
+    copy:
+      src: README.md
+      dest: /var/www/html/
+      owner: root
+      group: root
+      mode: 0644
+    when: ansible_distribution == "Ubuntu"
+
