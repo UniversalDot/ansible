@@ -4,10 +4,9 @@
   become: true
   tasks: 
   
-  - name: install 
+  - name: install MariaDb server
     package:
-      name: httpd
+      name: mariadb-server
       state: latest
-      update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
