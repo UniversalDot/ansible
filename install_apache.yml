@@ -5,6 +5,7 @@
   tasks: 
   
   - name: install MariaDb server
+    tags: ubuntu,mariadb
     package:
       name: mariadb-server
       state: latest

@@ -28,3 +28,8 @@ Install playbooks:
 ```
 ansible-playbook --ask-become-pass install_apache.yml
 ```
+
+Install playbooks:
+```
+ansible-playbook --tags mariadb --ask-become-pass install_apache.yml
+```
