@@ -4,13 +4,10 @@
   become: true
   tasks: 
   
-  - name: update repository index
-    apt: 
+  - name: install 
+    package:
+      name: httpd
+      state: latest
       update_cache: yes
     when: ansible_distribution == "Ubuntu"
 
-  - name: install nginx package
-    apt: 
-      name: nginx
-      state: latest
-    when: ansible_distribution == "Ubuntu"
