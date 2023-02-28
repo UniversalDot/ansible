@@ -26,15 +26,15 @@ ansible all -m apt -a name=vim-nox --become --ask-become-pass
 
 Install playbooks:
 ```
-ansible-playbook --ask-become-pass install_apache.yml
+ansible-playbook --ask-become-pass install.yml
 ```
 
 Install playbooks:
 ```
-ansible-playbook --tags mariadb --ask-become-pass install_apache.yml
+ansible-playbook --tags mariadb --ask-become-pass install.yml
 ```
 
 Install when remote_user is specified:
 ```
-ansible-playbook install_apache.yml
+ansible-playbook install.yml
 ```
