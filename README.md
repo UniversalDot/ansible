@@ -33,3 +33,8 @@ Install playbooks:
 ```
 ansible-playbook --tags mariadb --ask-become-pass install_apache.yml
 ```
+
+Install when remote_user is specified:
+```
+ansible-playbook install_apache.yml
+```
