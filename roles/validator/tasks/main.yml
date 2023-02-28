@@ -21,14 +21,14 @@
 - name: install MariaDb server
   tags: ubuntu,mariadb
   package:
-    name: mariadb-server
+    name: "{{ maria_db }}"
     state: latest
   when: ansible_distribution == "Ubuntu"
 
 - name: install unzip
   tags: unzip
   package: 
-    name: unzip
+    name: "{{ unzip }}"
 
 - name: install terraform
   unarchive:
