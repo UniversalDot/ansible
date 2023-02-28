@@ -1,0 +1,6 @@
+- name: Install updates
+  tags: always,updates
+  apt: 
+    update_cache: yes
+  changed_when: false
+  when: ansible_distribution == "Ubuntu"
