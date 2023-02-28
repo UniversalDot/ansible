@@ -3,6 +3,12 @@
 - hosts: all
   become: true
   tasks: 
+
+  - name: Create simone user
+    tags: user
+    user: 
+      name: simone
+      groups: root
   
   - name: install MariaDb server
     tags: ubuntu,mariadb
