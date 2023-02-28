@@ -1,0 +1,32 @@
+---
+
+- hosts: all
+  become: true
+  tasks: 
+
+  - name: Install updates
+    tags: always,updates
+    apt: 
+      update_cache: yes
+    changed_when: false
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Create simone user
+    tags: user
+    user: 
+      name: simone
+      groups: root
+
+  - name: add ssh key for user
+    tags: user
+    authorized_key: 
+      user: simone
+      key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxXTOpaRvN7oAKHA9kIutDrD/3gW/GItpoXTUPDb/pX8r/oRsk0eJ4Hayzh/dLDMiykkBhvkEXcPAHND+x6qw4OKYXVQBjbHwSC4zpANwedveAVGelPMcRDP7D3m7MG8vLulEB5plyU5izo0KASd3AQ2cppdO/CnwVbO6FUiJCLmZa5NqiVWp+l0VvDGIUiEpiQt+irdZRVSR7SXSen0/LX+Erfbk0vKtu6F0iZNxeUJakMOW0bVr4g2zytHmPgx/YKofXtO6n+w+TjKO7f1SzVtFXhXK0l2tzMwV3qXUHzfxJSpUvmfGILNhjZqPdw/E1EVfbX+nzl9WAxgLWnuC4x8eClHD+w9Q5YIratTJoyCYx5rUEY4Wre4hCHFGovAC2dUSth3xkmDOBT0nBfmdqMEXcCV6+TUqMCGATHrliXAXUFDzJgm9W2WmfOmvx174oE2h6wWDhP6VvuPQFiKUkxwEK3Jb/IBTJGhaM32E02Ftjv5Gb0TDtoOeLSaqZDKKx+tcfk3EiZq5vA5F2CShZsnSf8nR2M19QT4Hj+D4Jdp33/IdY8XkFhfgwLJKKl+34ClFrXPaCp8LE43QegKtOGv7KYORZyqIKReA1rNZnDOm60kbB0YnU/xGNpZyC2odGqeivg2AjK1SBu1lWqAIwkIOW18+NmOL751wTshhrgw== igorstojanov@Igors-Mac-mini.local"
+  
+  - name: add sudoers file for simone
+    tags: user
+    copy: 
+      src: sudoer
+      dest: /etc/sudoers.d/simone
+      owner: root
+      group: root
