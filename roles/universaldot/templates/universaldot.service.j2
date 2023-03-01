@@ -1,0 +1,10 @@
+[Service]
+User=universaldot
+ExecStart=/usr/local/bin/target/release/node-template \
+ --dev \
+ --tmp \
+ --ws-external \
+ --rpc-cors all
+
+Restart=always
+RestartSec=60

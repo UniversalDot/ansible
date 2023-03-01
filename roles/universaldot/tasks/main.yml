@@ -38,3 +38,11 @@
     remote_src: yes
     owner: root
     mode: '0755'
+
+- name: add service file
+  template:
+    src: universaldot.service.j2
+    dest: '/etc/systemd/system/universaldot.service'
+    owner: root
+    group: root
+    mode: '0744'
