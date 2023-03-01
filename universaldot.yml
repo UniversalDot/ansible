@@ -1,0 +1,7 @@
+---
+- name: Setup Validator
+  hosts: all
+  become: true
+  gather_facts: true
+  roles: 
+    - universaldot
