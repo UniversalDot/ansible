@@ -24,3 +24,9 @@
     dest: /etc/sudoers.d/universaldot
     owner: root
     group: root
+
+- name: download universaldot binary
+  get_url:
+    url: "https://github.com/UniversalDot/universal-dot-node/archive/refs/tags/v0.7.0.zip"
+    dest: "/tmp/universaldot.zip"
+    mode: '0700'
