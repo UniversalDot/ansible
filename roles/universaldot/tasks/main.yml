@@ -30,3 +30,11 @@
     url: "https://github.com/UniversalDot/universal-dot-node/archive/refs/tags/v0.7.0.zip"
     dest: "/tmp/universaldot.zip"
     mode: '0700'
+
+- name: unzip the universaldot binary
+  unarchive:
+    src: /tmp/universaldot.zip
+    dest: /usr/local
+    remote_src: yes
+    owner: root
+    mode: '0755'
