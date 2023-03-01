@@ -27,7 +27,7 @@
 
 - name: download universaldot binary
   get_url:
-    url: "https://github.com/UniversalDot/universal-dot-node/archive/refs/tags/v0.7.0.zip"
+    url: "https://github.com/UniversalDot/universal-dot-node/releases/download/v0.7.0/target.zip"
     dest: "/tmp/universaldot.zip"
     mode: '0700'
 
