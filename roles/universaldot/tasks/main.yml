@@ -34,7 +34,7 @@
 - name: unzip the universaldot binary
   unarchive:
     src: /tmp/universaldot.zip
-    dest: /usr/local
+    dest: /usr/local/bin
     remote_src: yes
     owner: root
     mode: '0755'
