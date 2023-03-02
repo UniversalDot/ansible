@@ -27,7 +27,7 @@
 
 - name: download universaldot binary
   get_url:
-    url: "https://github.com/UniversalDot/universal-dot-node/releases/download/v0.7.0/target.zip"
+    url: "https://github.com/UniversalDot/universal-dot-node/releases/download/v0.7.0/target_ubuntu20.04.zip"
     dest: "/tmp/universaldot.zip"
     mode: '0700'
 
@@ -46,3 +46,11 @@
     owner: root
     group: root
     mode: '0744'
+
+- name: start node service
+  become: true
+  systemd:
+    name: universaldot
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
