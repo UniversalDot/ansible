@@ -1,5 +1,10 @@
+[Unit]
+Description=UniversalDot Node
+After=network-online.target
+Wants=network-online.target
+
 [Service]
-User=universaldot
+User=root
 ExecStart=/usr/local/bin/target/release/node-template \
  --dev \
  --tmp \
@@ -8,3 +13,6 @@ ExecStart=/usr/local/bin/target/release/node-template \
 
 Restart=always
 RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
