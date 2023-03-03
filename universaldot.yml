@@ -1,5 +1,5 @@
 ---
-- name: Setup Validator
+- name: Setup universaldot validator
   hosts: all
   become: true
   gather_facts: true
