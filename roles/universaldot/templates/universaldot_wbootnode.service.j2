@@ -1,0 +1,24 @@
+[Unit]
+Description=UniversalDot Node
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/target/release/node-template \
+--base-path /tmp/bob \
+--name {{ validator_name }} \
+--chain local \
+--bob \
+--port 30334 \
+--ws-port 9946 \
+--rpc-port 9934 \
+--telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
+--validator
+--bootnodes /ip4/127.0.0.1/tcp/30333/p2p/{{ local_node_identity }}
+
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
