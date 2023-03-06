@@ -1,3 +1,4 @@
 maria_db: mariadb-server
 unzip: unzip
 terraform: terraform
+chain_type: local
