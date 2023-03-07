@@ -6,6 +6,8 @@ Automatic Provisioning of validators
 The following ansible playbooks are used to provision Ubuntu Machine and deploy a universaldot validator to a specified machine. 
 
 Among the tasks performed are the following:
+- Install journald, nginx, set firewall (make sure its enabled in production)
+- Start Journald and Nginx services
 - SSH connection via priv/pub key pairs
 - Install updates
 - Create new user with admin rights
