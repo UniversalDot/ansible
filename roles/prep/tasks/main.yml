@@ -31,6 +31,11 @@
 #   ufw:
 #     state: enabled
 
+- name: create letsencrypt directory
+  file:
+    name: /var/www/letsencrypt
+    state: directory
+
 - name: copy journald config
   copy:
     src: journald.conf
