@@ -26,9 +26,9 @@
     enabled: yes
   changed_when: false
 
-- name: Enable firewall
-  ufw:
-    state: enabled
+# - name: Enable firewall
+#   ufw:
+#     state: enabled
 
 - name: copy journald config
   copy:
