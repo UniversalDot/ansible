@@ -32,6 +32,14 @@
     src: nginx-http-certificate.j2
     dest: /etc/nginx/sites-enabled/http
 
+- name: restart nginx service
+  systemd:
+    name: nginx
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  changed_when: false
+
 # - name: Enable firewall
 #   ufw:
 #     state: enabled
