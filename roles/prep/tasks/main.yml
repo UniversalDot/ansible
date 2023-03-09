@@ -19,6 +19,14 @@
     path: /etc/nginx/sites-enabled/default
     state: absent
 
+- name: copy nginx index file to server
+  copy:
+    src: index.html
+    dest: /var/www/html/
+    owner: root
+    group: root
+    mode: 0644
+
 - name: Install nginx site for letsencrypt requests
   template:
     src: nginx-http-certificate.j2
