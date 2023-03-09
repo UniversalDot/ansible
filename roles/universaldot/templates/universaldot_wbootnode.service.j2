@@ -10,9 +10,9 @@ ExecStart=/usr/local/bin/target/release/node-template \
 --name {{ validator_name }} \
 --chain local \
 --bob \
---port 30334 \
---ws-port 9946 \
---rpc-port 9934 \
+--port 30333 \
+--ws-port 9945 \
+--rpc-port 9933 \
 --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" \
 --validator \
 --bootnodes /ip4/194.135.82.229/tcp/30333/p2p/{{ local_node_identity }}
