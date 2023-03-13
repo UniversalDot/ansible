@@ -50,7 +50,7 @@
     state: directory
 
 - name: Create letsencrypt certificate
-  shell: letsencrypt --renew-by-default certonly -n --webroot -w /var/www/letsencrypt -m {{ letsencrypt_email }} --agree-tos -d {{ ansible_host }}
+  shell: letsencrypt certonly -n --webroot -w /var/www/letsencrypt -m {{ letsencrypt_email }} --agree-tos -d {{ ansible_host }}
   args:
     creates: /etc/letsencrypt/live/{{ ansible_host }}
 
