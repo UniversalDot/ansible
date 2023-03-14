@@ -27,7 +27,7 @@
 
 - name: download universaldot binary
   get_url:
-    url: "https://github.com/UniversalDot/universal-dot-node/releases/download/v0.7.0/target_ubuntu20.04.zip"
+    url: '{{ binary_url }}'
     dest: "/tmp/universaldot.zip"
     mode: '0700'
 
