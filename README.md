@@ -68,6 +68,12 @@ Generate new key-rotation for validator
  
 ```
 
+## Configuration
+
+Make sure you edit the configuration in inventory.ini to the correct server settings. 
+
+These include host information for each node as well as general config items.
+
 ### Versions:
 ansible [core 2.14.2]
   executable location = /opt/homebrew/bin/ansible
