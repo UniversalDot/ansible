@@ -6,7 +6,7 @@ The deployment has been tasted on close to bare metal Ubuntu 20.04 machines.
 
 The deployment may work on other Linux versions or distributions, but it has not been tested.
 
-![Logo](https://github.com/UniversalDot/documents/blob/master/logo/rsz_jpg-02.jpg)
+![Logo](https://github.com/UniversalDot/documents/blob/master/logo/universaldot-logo/rsz_jpg-02.jpg)
 
 The following ansible playbooks are used to provision Ubuntu Machine and deploy a universaldot validator to a specified machine. 
 
