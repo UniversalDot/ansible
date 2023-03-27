@@ -43,3 +43,8 @@
     dest: /usr/local/docker
     clone: yes
     update: yes
+- name: Start IPFS containers
+  become: True
+  shell:
+    cmd: "docker compose up -d ipfs-node ipfs-cluster"
+    chdir: /usr/local/docker
