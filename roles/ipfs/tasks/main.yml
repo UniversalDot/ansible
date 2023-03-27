@@ -37,3 +37,9 @@
     url : https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
     dest: /usr/local/bin/docker-compose
     mode: '755'
+- name: Clone the compose service repository
+  git:
+    repo: https://github.com/UniversalDot/compose-service.git
+    dest: /usr/local/docker
+    clone: yes
+    update: yes
