@@ -24,6 +24,10 @@ Among the tasks performed are the following:
 - Start systemctl service
 **Playbook key_rotation**
 - Generate new key for validator and display on screen
+**Playbook IPFS**
+- Install Docker and Docker Compose
+- Clone the Compose Service repository
+- Run the IPFS and IPFS-Cluster repositories
 
 ## Useful Commands
 
