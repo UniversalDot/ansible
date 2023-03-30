@@ -17,13 +17,16 @@ Among the tasks performed are the following:
 - Install journald, nginx, set firewall (make sure its enabled in production),
 - Generate letsencrypt, dhparams certificate on the server
 - Start Journald and Nginx services
+  
 **Playbook universaldot**
 - Install updates
 - Create new user with admin rights
 - Download binary and unzip 
 - Start systemctl service
+  
 **Playbook key_rotation**
 - Generate new key for validator and display on screen
+  
 **Playbook IPFS**
 - Install Docker and Docker Compose
 - Clone the Compose Service repository
