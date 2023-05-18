@@ -81,7 +81,9 @@ Make sure you edit the configuration in inventory.ini to the correct server sett
 
 These include host information for each node as well as general config items.
 
-Make sure to configure the correct **local_node_identity** you are connecting to. 
+Make sure to configure the correct **local_node_identity** you are connecting to.
+ 
+Also, the bootnodes are currently hardcoded so make sure to change them in the template service: universaldot_wbootnode.service.j2
 
 ### Versions:
 ansible [core 2.14.2]
