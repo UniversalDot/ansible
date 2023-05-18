@@ -71,7 +71,7 @@ ansible-playbook universaldot.yml
 
 Generate new key-rotation for validator
 ```
- ansible-playbook key-rotation.yml -e "target=universaldot_validator_02"
+ansible-playbook key-rotation.yml -e "target=universaldot_validator_02"
  
 ```
 
